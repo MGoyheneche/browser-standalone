@@ -6,6 +6,6 @@ PYTHON_DIR=py3.3_env
 # Set python home after activate
 export PYTHONHOME=$PYTHON_DIR
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:lib/:$PYTHONHOME/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:lib/:$PYTHONHOME/lib/:libs/pySequenceParser
 
-$PYTHONHOME/bin/python fileModelBrowser.py
+$PYTHONHOME/bin/python main.py

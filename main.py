@@ -1,20 +1,18 @@
 import os, sys
-import sequenceParser
+from pySequenceParser import sequenceParser
 
 if len(sys.argv) > 2:
-    print( 'lsFile takes only one path.' )
-    sys.exit()
+  print( 'lsFile takes only one path.' )
+  sys.exit()
 
 path = os.curdir
 if len(sys.argv) == 2 :
-    path = sys.argv[1]
+  path = sys.argv[1]
 
-# files = sequenceParser.fileInDirectory( path )
 files = sequenceParser.browse(path)
 
-# print(files)
 for f in files :
-    print(f._filename)
+  print(f._filename)
 
 
 
