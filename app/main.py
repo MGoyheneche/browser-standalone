@@ -34,22 +34,6 @@ class Browser(QtCore.QObject):
 
 
 
-#class Foo(QtCore.QObject):
-
-#    # Define a new signal called 'trigger' that has no arguments.
-#    trigger = QtCore.pyqtSignal()
-
-#    def connect_and_emit_trigger(self):
-#        # Connect the trigger signal to a slot.
-#        self.trigger.connect(self.handle_trigger)
-
-#        # Emit the signal.
-#        self.trigger.emit()
-
-#    def handle_trigger(self):
-#        # Show that the slot has been called.
-#        print("trigger signal received")
-
 
 currentFilePath = os.path.dirname(os.path.abspath(__file__))
 
@@ -63,9 +47,9 @@ if __name__ == '__main__':
 
     qmlRegisterType(Browser, 'Browser', 1, 0, 'Browser')
 
-    #view.setWindowTitle("Browser")
+#    view.setWindowTitle("Browser")
     qmlFilePath = os.path.join(currentFilePath, "Browser.qml")
-    print(qmlFilePath)
+#    print(qmlFilePath)
     view.setSource(QtCore.QUrl(qmlFilePath))
     view.setResizeMode(QtQuick.QQuickView.SizeRootObjectToView)
 
