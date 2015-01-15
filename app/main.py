@@ -28,7 +28,6 @@ class Browser(QtCore.QObject):
         self.titleChange.emit()
 
     titleChange = QtCore.pyqtSignal()
-    titleChange.connect(self.greeting)
     title = QtCore.pyqtProperty(str, getTitle, setTitle, notify=titleChange)
 
 
